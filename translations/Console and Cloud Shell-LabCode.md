@@ -21,15 +21,16 @@ Task 3: Explore more Cloud Shell features
 Upload a file
 -       Open Cloud Shell.
 -	Click the three dots ( ) icon in the Cloud Shell toolbar to display further options.
--                Click Upload file. Upload any file from your local machine to the Cloud Shell VM. This file will be referred to as [MY_FILE].
+-       Click Upload file. Upload any file from your local machine to the Cloud Shell VM. This file will be referred to as [MY_FILE].
 - 	In Cloud Shell, type ls to confirm that the file was uploaded.
 
 	      ls (this command display files in the current directory including newly uploaded one)
+	      
 -	Copy the file into one of the buckets you created earlier in the lab. Replace [MY_FILE] with the file you uploaded and [BUCKET_NAME] with one of your bucket names:
 
               gsutil cp file.txt gs://adewale-bucket2
-       (Note If your filename has whitespaces, ensure to place single quotes around the filename. For example, gsutil cp ‘my file.txt' gs://[BUCKET_NAME])
-        You have uploaded a file to the Cloud Shell VM and copied it to a bucket.
+              (Note If your filename has whitespaces, ensure to place single quotes around the filename. For example, gsutil cp ‘my file.txt' gs://[BUCKET_NAME])
+               You have uploaded a file to the Cloud Shell VM and copied it to a bucket.
 
 Task 4: Create a persistent state in Cloud Shell
 Steps;
