@@ -12,18 +12,19 @@ Objectives;
 Steps;
 1.	Create a virtual machine using the GCP Console
 
-       gcloud compute instances create "my-vm-1" --machine-type "n1-standard-1" --image-project "debian-cloud" --image "debian-9-stretch-v20190213" --subnet "default" --tags          “http”
+           gcloud compute instances create "my-vm-1" --machine-type "n1-standard-1" --image-project "debian-cloud" --image "debian-9-stretch-v20190213" --subnet "default" 
+           --tags “http”
 
-       gcloud compute firewall-rules create allow-http --action=ALLOW --destination=INGRESS --rules=tcp:80 --target-tags=http
+           gcloud compute firewall-rules create allow-http --action=ALLOW --destination=INGRESS --rules=tcp:80 --target-tags=http
 
 
 2.	Create a virtual machine using the gcloud command line
 
-       gcloud compute zones list | grep us-central (Note: this command will list the zones in us-central1 region so that you choose your desired zone)
+           gcloud compute zones list | grep us-central (Note: this command will list the zones in us-central1 region so that you choose your desired zone)
 
-       gcloud config set compute/zone us-central1-b (This command will set us-central1-b as your zone)
+          gcloud config set compute/zone us-central1-b (This command will set us-central1-b as your zone)
 
-       gcloud compute instances create "my-vm-2" --machine-type "n1-standard-1" --image-project "debian-cloud" --image "debian-9-stretch-v20190213" --subnet "default" 
+          gcloud compute instances create "my-vm-2" --machine-type "n1-standard-1" --image-project "debian-cloud" --image "debian-9-stretch-v20190213" --subnet "default" 
 
 3.	Connect between the two VM instances
 
@@ -31,15 +32,15 @@ Use the ping command to confirm that my-vm-2 can reach my-vm-1 over the network:
 
 -	Connect to my-vm-2
 
-      gcloud compute ssh my-vm-2
+          gcloud compute ssh my-vm-2
 
 -	Ping my-vm-1 from my-vm-2
 
-      Ping -c 3 my-vm-1
+          Ping -c 3 my-vm-1
       
-Use the ssh command to open a command prompt on my-vm-1 from my-vm-2:
-
-    ssh my-vm-1
+-    Use the ssh command to open a command prompt on my-vm-1 from my-vm-2:
+  
+         ssh my-vm-1
 
 - At the command prompt on my-vm-1, install the Nginx web server:
 
