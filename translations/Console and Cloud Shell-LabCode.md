@@ -19,7 +19,7 @@ Task 2: Create a bucket using Cloud Shell
 
 Task 3: Explore more Cloud Shell features
 Upload a file
--              Open Cloud Shell.
+-       Open Cloud Shell.
 -	Click the three dots ( ) icon in the Cloud Shell toolbar to display further options.
 -                Click Upload file. Upload any file from your local machine to the Cloud Shell VM. This file will be referred to as [MY_FILE].
 - 	In Cloud Shell, type ls to confirm that the file was uploaded.
@@ -54,6 +54,7 @@ c.	Append the environment variable to a file
 -       Create a subdirectory for materials used in this class:
 
             mkdir infraclass
+	    
 -	Create a file called config in the infraclass directory:
 
             touch infraclass/config
@@ -89,6 +90,7 @@ d.	Modify the bash profile and create persistence
 -	Edit the shell profile with the following command:
 
         nano .profile
+	
 -	Add the following line to the end of the file:
 
            source infraclass/config
